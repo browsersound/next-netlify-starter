@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { getSortedPostsData } from '../lib/posts'
-import Image from 'next/image'
-// import ViewSource from '../components/view-source'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -33,7 +31,7 @@ export default function Home({ allPostsData }) {
         </h1>
 
         <p className="description">
-          A Festival of Web-based Music | June 11th-13th 
+          A Festival of Web-based Music | June 10th-12th <code>opening july 11th</code>
         </p>
 
         <div className="grid">
@@ -44,8 +42,7 @@ export default function Home({ allPostsData }) {
             <p>Experience the festival through your own VR Avatar (a more open experience) </p>
           </a>
 
-          <a Link href="/posts/livestream"
-              className="card">
+          <a href="https://nextjs.org/learn" className="card">
             <h3>Livestream &rarr;</h3>
             <p>Watch the festival through our curated livestream (a more coventional concert format)  </p>
           </a>
@@ -58,22 +55,18 @@ export default function Home({ allPostsData }) {
             <p></p>
           </a>
 
-         
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className="card"
+          >
+            <h3><code>Deploy</code> &rarr;</h3>
+            <p>
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
+          </a>
         </div>
-
-    <div className="bgWrap">
-        <Image
-        alt="tonejs-snippet"
-        src="/images/Tone-JS-Snippet-000042.png"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-          />
-    </div>
-
       </main>
 
- 
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -81,15 +74,7 @@ export default function Home({ allPostsData }) {
           rel="noopener noreferrer"
         >
           With support from {' '}
-          <img src="/SKAM_logo_RZ.svg" alt="SKAM Logo" className="logo" />
-        </a>
-          <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           {' '}
-          <img src="/HMDK_Logo_1C.jpg" alt="HMDK Logo" className="logo" />
+          <img src="/SKAM_logo_RZ" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
 
@@ -123,16 +108,12 @@ export default function Home({ allPostsData }) {
 
         footer img {
           margin-left: 0.5rem;
-
         }
 
         footer a {
           display: flex;
           justify-content: center;
           align-items: center;
-           background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
         }
 
         a {
@@ -155,9 +136,6 @@ export default function Home({ allPostsData }) {
           margin: 0;
           line-height: 1.15;
           font-size: 6rem;
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
         }
 
         .title,
@@ -168,10 +146,6 @@ export default function Home({ allPostsData }) {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-
         }
 
         code {
@@ -203,7 +177,6 @@ export default function Home({ allPostsData }) {
           border: 1px solid #eaeaea;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
-          background: #fafafa;
         }
 
         .card:hover,
@@ -226,15 +199,6 @@ export default function Home({ allPostsData }) {
 
         .logo {
           height: 1em;
-
-        }
-
-        .bgWrap {
-          position: fixed;
-          height: 100vh;
-          width: 100vw;
-          overflow: hidden;
-          z-index: -1;
         }
 
         @media (max-width: 600px) {
@@ -258,7 +222,6 @@ export default function Home({ allPostsData }) {
         * {
           box-sizing: border-box;
         }
-
       `}</style>
     </div>
   )
